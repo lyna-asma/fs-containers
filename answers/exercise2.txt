@@ -1,0 +1,8 @@
+lyna@DESKTOP-J6LE205:/mnt/c/Users/lyna/Desktop/Fullstackopen-course/fs-containers$    docker run -it ubuntu bash
+root@741fa9098d29:/#    mkdir /usr/src/app
+   touch /usr/src/app/index.js
+   ls -l /usr/src/app
+   exit
+total 0
+-rw-r--r-- 1 root root 0 Oct  8 22:57 index.js
+exit
