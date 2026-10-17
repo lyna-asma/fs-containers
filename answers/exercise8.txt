@@ -1,0 +1,45 @@
+lyna@DESKTOP-J6LE205:/mnt/c/Users/lyna/Desktop/Fullstackopen-course/fs-containers/todo-app/todo-backend$ docker container run -d nginx
+Unable to find image 'nginx:latest' locally
+latest: Pulling from library/nginx
+6a6757ab48b1: Pull complete 
+b19352c60515: Pull complete 
+113d9139ada2: Pull complete 
+792a76c59dbd: Pull complete
+188e9077f350: Pull complete 
+c9ec797c69ed: Pull complete 
+ecc510c1e359: Pull complete 
+2b7d75aa4652: Download complete 
+3a5a894bf2b2: Download complete 
+Digest: sha256:332d0beea97cff8c0d5d27976c0778a4b00345b9d74c2feaaf8efde548314948
+Status: Downloaded newer image for nginx:latest
+1c9c16af365fb6e8a2ef5788c775b11e7f9cea38e19ebf80da4ed13202b0af4b
+lyna@DESKTOP-J6LE205:/mnt/c/Users/lyna/Desktop/Fullstackopen-course/fs-containers/todo-app/todo-backend$ docker container ls
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                                           NAMES
+1c9c16af365f   nginx     "/docker-entrypoint.…"   35 seconds ago   Up 35 seconds   80/tcp                                          adoring_nash
+5ebb384c3070   mongo     "docker-entrypoint.s…"   24 hours ago     Up 24 hours     0.0.0.0:3456->27017/tcp, [::]:3456->27017/tcp   todo-backend-mongo-1
+lyna@DESKTOP-J6LE205:/mnt/c/Users/lyna/Desktop/Fullstackopen-course/fs-containers/todo-app/todo-backend$ docker container stop keen_darwin
+Error response from daemon: No such container: keen_darwin
+lyna@DESKTOP-J6LE205:/mnt/c/Users/lyna/Desktop/Fullstackopen-course/fs-containers/todo-app/todo-backend$ docker container stop 1c9c16af365
+1c9c16af365
+lyna@DESKTOP-J6LE205:/mnt/c/Users/lyna/Desktop/Fullstackopen-course/fs-containers/todo-app/todo-backend$  docker container rm  docker container rm
+Error response from daemon: No such container: docker
+Error response from daemon: No such container: container
+Error response from daemon: No such container: rm
+lyna@DESKTOP-J6LE205:/mnt/c/Users/lyna/Desktop/Fullstackopen-course/fs-containers/todo-app/todo-backend$  docker container rm 1c9c16af365f
+1c9c16af365f
+lyna@DESKTOP-J6LE205:/mnt/c/Users/lyna/Desktop/Fullstackopen-course/fs-containers/todo-app/todo-backend$ docker container run -d -p 8080:80 nginx
+lyna@DESKTOP-J6LE205:/mnt/c/Users/lyna/Desktop/Fullstackopen-course/fs-containers/todo-app/todo-back^Cd$ 
+lyna@DESKTOP-J6LE205:/mnt/c/Users/lyna/Desktop/Fullstackopen-course/fs-containers/todo-app/todo-backend$ docker container ls 
+CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS              PORTS                                           NAMES
+207fe73e10eb   nginx     "/docker-entrypoint.…"   About a minute ago   Up About a minute   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp         cranky_einstein
+5ebb384c3070   mongo     "docker-entrypoint.s…"   24 hours ago         Up 24 hours         0.0.0.0:3456->27017/tcp, [::]:3456->27017/tcp   todo-backend-mongo-1
+lyna@DESKTOP-J6LE205:/mnt/c/Users/lyna/Desktop/Fullstackopen-course/fs-containers/todo-app/todo-backend$ docker exec -it ce=ranky-einstein bash
+Error response from daemon: No such container: ce=ranky-einstein
+lyna@DESKTOP-J6LE205:/mnt/c/Users/lyna/Desktop/Fullstackopen-course/fs-containers/todo-app/todo-backend$ docker exec -it cra
+nky-einstein bash
+Error response from daemon: No such container: cranky-einstein
+lyna@DESKTOP-J6LE205:/mnt/c/Users/lyna/Desktop/Fullstackopen-course/fs-containers/todo-app/todo-backend$ docker exec -it cranky_einstein  bash
+root@207fe73e10eb:/# cd /usr/share/nginx/html/
+root@207fe73e10eb:/usr/share/nginx/html# rm index.html
+root@207fe73e10eb:/usr/share/nginx/html# echo "Hello, exec!" > index.html
+root@207fe73e10eb:/usr/share/nginx/html# 
